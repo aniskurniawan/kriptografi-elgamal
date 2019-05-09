@@ -1,4 +1,7 @@
-﻿<script>
+<div>
+  <p>&nbsp;</p><p align="center" class="text-muted"><br/> <a href="https://github.com/aniskurniawan">&#9400; <?= date('Y') ?> Anis Kurniawan. All Right Reserved.</a></p>
+</div>
+<script>
 function openCity(evt, cityName) {
   var i, tabcontent, tablinks;
   tabcontent = document.getElementsByClassName("tabcontent");
@@ -18,4 +21,4 @@ document.getElementById("defaultOpen").click();
 </script>
    
 </body>
-</html> 
+</html>
