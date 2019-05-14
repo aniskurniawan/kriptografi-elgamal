@@ -1,10 +1,13 @@
 <?php
-    // Membangkitkan bilangan acak k dan x
+    // Membangkitkan bilangan acak k, x, g
     function _k($p){
-            return rand(1,$p-1);
+            return rand(1,$p-2);
     }
     function _x($p){
-            return rand(1,$p-2);    
+            return rand(1,$p-1);
+    }
+    function _g($p){
+            return rand(1,$p-1);    
     }
     // Algoritma pemangkatan modular, menghitung y=g^x mod p
     function _y($g, $x, $p){
@@ -74,7 +77,7 @@
             return $hasil;    
     }
 
-    //Dekripsi Ciperteks
+    //Dekripsi Chiperteks
     function dekripsi($teks, $x, $p){
             $t = explode(" ",$teks);
             $ascii = "";
@@ -89,16 +92,26 @@
             return toteks($ascii);
     }
 
+    //Menghapus spasi ganda
+    function trimed($txt){
+        $txt = trim($txt);
+        while( strpos($txt, '  ') ){
+        $txt = str_replace('  ', ' ', $txt);
+        }
+        return $txt;
+    }
+
     // Jika Button Enkripsi ditekan
     if(!empty($_POST['enkripsi'])){
         $time_start = microtime(true); // Timer mulai eksekusi
         $p=$_POST['p'];
-        $g=$_POST['g'];
         $teks=$_POST['teks'];
-        $k=_k($p);
+        $g=_g($p);
         $x=_x($p);
+        $k=_k($p);
         $y = _y($g, $x, $p);
         $hasilenkripsi = enkripsi($teks,$p,$g,$y,$k);
+        $hasilenkripsi = trimed($hasilenkripsi);
         $time_end = microtime(true); // Timer stop eksekusi
         // Waktu Eksekusi
         $duration = $time_end - $time_start;
@@ -115,5 +128,15 @@
         // Waktu Eksekusi
         $duration = $time_end - $time_start;
     }
-
+    // Jika Button Deskripsi ditekan
+    if(!empty($_POST['prima'])){
+        $n=$_POST['n'];
+        $prima = true;
+        for($i=2; $i<=($n/2); $i++) {
+            if(($n%$i)==0) {
+                $prima = false;
+                break; //untuk menghentikan looping pada program
+            }
+        }
+    }
 ?>
