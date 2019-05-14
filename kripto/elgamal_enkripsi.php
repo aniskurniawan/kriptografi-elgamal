@@ -33,7 +33,7 @@ include("../assets/header.php");?>
             <p><b>Kunci yang digunakan :</b></p>
             <p>Kunci publik (y, g, p) = (<span style="color:blue;">'.$y.'</span>, <span style="color:blue;">'.$g.'</span>, <span style="color:blue;">'.$p.'</span>)</p>
             <p><b>Hasil enkripsi pesan :</b></p> <textarea rows="4" cols="50" placeholder="Chiperteks" name="teks" id="teks" disabled>'.$hasilenkripsi.' </textarea>
-            <p style="color:red;">'.$duration.' detik</p>';
+            <p style="color:gray;"><i>'.$duration.' detik</i></p>';
     }
     ?>
 </div>
