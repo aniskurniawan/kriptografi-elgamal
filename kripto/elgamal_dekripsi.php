@@ -37,7 +37,7 @@ include("../assets/header.php");?>
             <p><b>Kunci yang digunakan :</b></p>
             <P>Kunci privat (x, p) = (<span style="color:blue;">'.$x.'</span>, <span style="color:blue;">'.$p.'</span>)</p>
             </p><br/><b>Hasil dekripsi pesan :</b></p> <textarea rows="4" cols="50" placeholder="Chiperteks" name="teks" id="teks" disabled>'.$hasildekripsi.' </textarea>
-            <p style="color:red;">'.$duration.' detik</p>';
+            <p style="color:gray;"><i>'.$duration.' detik</i></p>';
     }
     ?>
 </div>
