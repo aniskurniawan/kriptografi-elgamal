@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>ENKRIPSI DEKRIPSI</title>
+<title>Algoritma ElGamal</title>
 <style>
 * {box-sizing: border-box}
 body {font-family: "Lato", sans-serif;font-size: 16px; margin: 30px;}
